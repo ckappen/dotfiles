@@ -9,3 +9,11 @@
 [user]
 	name = Christian Kappen
 	email = christian.kappen@live.de
+	signingkey = FC469B2AA7C24E61
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[commit]
+	gpgsign = true
